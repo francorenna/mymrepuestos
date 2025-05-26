@@ -4,6 +4,7 @@ import Header from './Components/Header.jsx';
 import Banner from './Components/Banner.jsx';
 import Nosotros from './Components/Nosotros.jsx';
 import Servicios from './Components/Servicios.jsx';
+import NuestrasMarcas from './Components/NuestrasMarcas.jsx';
 // ...otros imports...
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Banner />
           <Nosotros />
           <Servicios />
+          <NuestrasMarcas />
           {/* Aquí puedes agregar Hero, secciones, etc */}
         </div>
       )}
