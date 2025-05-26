@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mymrepuestos/static/css/main.d92a33be.css",
+    "main.js": "/mymrepuestos/static/js/main.a7de101d.js",
+    "static/js/453.058aac27.chunk.js": "/mymrepuestos/static/js/453.058aac27.chunk.js",
+    "index.html": "/mymrepuestos/index.html",
+    "main.d92a33be.css.map": "/mymrepuestos/static/css/main.d92a33be.css.map",
+    "main.a7de101d.js.map": "/mymrepuestos/static/js/main.a7de101d.js.map",
+    "453.058aac27.chunk.js.map": "/mymrepuestos/static/js/453.058aac27.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d92a33be.css",
+    "static/js/main.a7de101d.js"
+  ]
+}
