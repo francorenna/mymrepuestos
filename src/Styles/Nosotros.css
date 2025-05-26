@@ -1,0 +1,93 @@
+.nosotros-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 56px 0 32px 0;
+  padding: 0 16px;
+}
+
+.nosotros-title {
+  color: #002060;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  margin-top: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.nosotros-title::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 0;
+  height: 3px;
+  background: #002060;
+  border-radius: 2px;
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nosotros-title.underline-animate::after {
+  width: 60%;
+}
+
+.nosotros-logo-container {
+  margin-bottom: 24px;
+}
+
+.nosotros-logo {
+  width: 180px;
+  max-width: 80vw;
+  height: auto;
+  display: block;
+}
+
+.nosotros-text {
+  color: #666;
+  font-size: 1.15rem;
+  font-style: italic;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  quotes: "“" "”" "‘" "’";
+  padding: 0;
+  background: none;
+  border: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-block-start: 0;
+  padding-block-end: 0;
+}
+
+.nosotros-text:before {
+  content: open-quote;
+  color: #bbb;
+  font-size: 2.5rem;
+  vertical-align: -0.4em;
+  line-height: 0;
+  margin-right: 0.25em;
+}
+
+.nosotros-text:after {
+  content: close-quote;
+  color: #bbb;
+  font-size: 2.5rem;
+  vertical-align: -0.4em;
+  line-height: 0;
+}
+
+/* Responsive para celulares */
+@media (max-width: 600px) {
+  .nosotros-text {
+    font-size: 0.98rem;
+  }
+  .nosotros-logo {
+    width: 120px;
+  }
+  .nosotros-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+}
