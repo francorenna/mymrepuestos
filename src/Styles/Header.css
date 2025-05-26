@@ -28,6 +28,9 @@
   background: #002060; /* Azul oscuro */
   border-radius: 32px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  flex-wrap: wrap;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 .main-nav li {
@@ -52,4 +55,21 @@
   background: #003399;
   color: #fff;
   transform: scale(1.12);
+}
+
+/* Responsive para tablets y celulares */
+@media (max-width: 600px) {
+  .main-nav ul {
+    gap: 8px;
+    padding: 0 4px;
+    margin: 16px 0 0 0;
+    border-radius: 16px;
+    flex-wrap: wrap;
+    width: 98vw;
+    box-sizing: border-box;
+  }
+  .main-nav a {
+    font-size: 1rem;
+    padding: 10px 8px;
+  }
 }
