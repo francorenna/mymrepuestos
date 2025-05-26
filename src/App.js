@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LogoIntro from './Components/LogoIntro';
 import Header from './Components/Header.jsx';
+import Banner from './Components/Banner.jsx';
 // ...otros imports...
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       {!showIntro && (
         <div className="App">
           <Header />
+          <Banner />
           {/* Aquí puedes agregar Hero, secciones, etc */}
         </div>
       )}
