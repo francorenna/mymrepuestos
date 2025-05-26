@@ -12,6 +12,24 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 32px;
+  margin-top: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.contacto-title::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 0;
+  height: 3px;
+  background: #002060;
+  border-radius: 2px;
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contacto-title.underline-animate::after {
+  width: 60%;
 }
 
 .contacto-content {
@@ -103,5 +121,21 @@
   }
   .contacto-form {
     max-width: 98vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .contacto-title {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+  }
+  .contacto-mapa {
+    height: 140px;
+    min-width: 180px;
+    border-radius: 10px;
+  }
+  .contacto-form {
+    padding: 14px 6px;
+    border-radius: 10px;
   }
 }
