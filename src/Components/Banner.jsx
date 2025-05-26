@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../Styles/Banner.css';
 
 const slides = [
@@ -11,16 +11,54 @@ const slides = [
 
 const Banner = () => {
   const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
 
   useEffect(() => {
+    if (paused) return;
     const timer = setTimeout(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearTimeout(timer);
-  }, [current]);
+  }, [current, paused]);
+
+  // Swipe handlers
+  const handleTouchStart = (e) => {
+    setPaused(true);
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current === null || touchEndX.current === null) {
+      setPaused(false);
+      return;
+    }
+    const distance = touchStartX.current - touchEndX.current;
+    const minSwipeDistance = 40;
+
+    if (distance > minSwipeDistance) {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    } else if (distance < -minSwipeDistance) {
+      setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+    setTimeout(() => setPaused(false), 300); // Retoma el autoplay tras el swipe
+  };
 
   return (
-    <div className="banner">
+    <div
+      className="banner"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+      style={{ overflow: 'hidden', width: '100%' }}
+    >
       <div
         className="banner-slider"
         style={{ transform: `translateX(-${current * 100}%)` }}
