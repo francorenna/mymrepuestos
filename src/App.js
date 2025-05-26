@@ -5,6 +5,7 @@ import Banner from './Components/Banner.jsx';
 import Nosotros from './Components/Nosotros.jsx';
 import Servicios from './Components/Servicios.jsx';
 import NuestrasMarcas from './Components/NuestrasMarcas.jsx';
+import Contacto from './Components/Contacto.jsx';
 // ...otros imports...
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Nosotros />
           <Servicios />
           <NuestrasMarcas />
+          <Contacto />
           {/* Aquí puedes agregar Hero, secciones, etc */}
         </div>
       )}
