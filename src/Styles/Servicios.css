@@ -3,6 +3,34 @@
   background: #f8faff;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicios-title {
+  color: #002060;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  margin-top: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.servicios-title::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 0;
+  height: 3px;
+  background: #002060;
+  border-radius: 2px;
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.servicios-title.underline-animate::after {
+  width: 60%;
 }
 
 .servicios-grid {
@@ -55,6 +83,10 @@
 
 /* Responsive para tablets y celulares */
 @media (max-width: 900px) {
+  .servicios-title {
+    font-size: 1.5rem;
+    margin-bottom: 28px;
+  }
   .servicios-grid {
     gap: 18px;
   }
@@ -66,6 +98,10 @@
 }
 
 @media (max-width: 600px) {
+  .servicios-title {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
   .servicios-grid {
     flex-direction: column;
     align-items: center;
@@ -76,5 +112,8 @@
     min-width: unset;
     max-width: 98vw;
     padding: 18px 6px 16px 6px;
+  }
+  .servicio-desc {
+    font-size: 0.98rem;
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../Styles/Servicios.css';
 
 const servicios = [
@@ -19,20 +19,32 @@ const servicios = [
   }
 ];
 
-const Servicios = () => (
-  <section className="servicios-section">
-    <div className="servicios-grid">
-      {servicios.map((serv, idx) => (
-        <div className="servicio-card" key={idx}>
-          <div className="servicio-icon">
-            <i className={serv.icon}></i>
+const Servicios = () => {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimate((prev) => !prev);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <section className="servicios-section">
+      <h2 className={`servicios-title${animate ? ' underline-animate' : ''}`}>Nuestros Servicios</h2>
+      <div className="servicios-grid">
+        {servicios.map((serv, idx) => (
+          <div className="servicio-card" key={idx}>
+            <div className="servicio-icon">
+              <i className={serv.icon}></i>
+            </div>
+            <h3 className="servicio-title">{serv.title}</h3>
+            <p className="servicio-desc">{serv.desc}</p>
           </div>
-          <h3 className="servicio-title">{serv.title}</h3>
-          <p className="servicio-desc">{serv.desc}</p>
-        </div>
-      ))}
-    </div>
-  </section>
-);
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Servicios;
