@@ -15,7 +15,7 @@ function LogoIntro({ onFinish }) {
 
   return (
     <div className={`logo-intro ${shrink ? 'shrink' : ''}`}>
-      <img src="/logointro.svg" alt="Logo MyM" />
+      <img src={process.env.PUBLIC_URL + '/logointro.svg'} alt="Logo MyM" />
     </div>
   );
 }

@@ -86,3 +86,44 @@
   opacity: 1;
   background: #002060;
 }
+
+@media (max-width: 900px) {
+  .banner {
+    max-width: 100%;
+    border-radius: 0;
+    margin: 16px 0 0 0;
+  }
+  .banner-img {
+    height: 220px;
+    border-radius: 0;
+  }
+  .banner-title {
+    font-size: 1.1rem;
+    padding: 10px 16px;
+    bottom: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    margin: 8px 0 0 0;
+  }
+  .banner-img {
+    height: 140px;
+  }
+  .banner-title {
+    font-size: 1rem;
+    padding: 8px 10px;
+    bottom: 8px;
+    border-radius: 16px;
+  }
+  .banner-dots {
+    bottom: 4px;
+    gap: 6px;
+  }
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-width: 1.5px;
+  }
+}

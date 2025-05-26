@@ -4,7 +4,7 @@ import '../Styles/Header.css';
 const Header = () => (
   <header className="main-header">
     <div className="logo-container">
-      <img src="/logointro.svg" alt="Logo MyM" className="header-logo" />
+      <img src={process.env.PUBLIC_URL + '/logointro.svg'} alt="Logo MyM" className="header-logo" />
     </div>
     <nav className="main-nav">
       <ul>

@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import '../Styles/Banner.css';
 
 const slides = [
-  { src: '/banner1.jpeg', title: 'Venta de Repuestos Originales' },
-  { src: '/banner2.jpeg', title: 'Servicio de Asesoramiento Técnico' },
-  { src: '/banner3.jpeg', title: 'Amplia Variedad de Marcas' },
-  { src: '/banner4.jpeg', title: 'Calidad y Confianza en Cada Producto' },
-  { src: '/banner5.jpeg', title: 'Promociones y Formas de pago' }
+  { src: process.env.PUBLIC_URL + '/banner1.jpeg', title: 'Venta de Repuestos Originales' },
+  { src: process.env.PUBLIC_URL + '/banner2.jpeg', title: 'Servicio de Asesoramiento Técnico' },
+  { src: process.env.PUBLIC_URL + '/banner3.jpeg', title: 'Amplia Variedad de Marcas' },
+  { src: process.env.PUBLIC_URL + '/banner4.jpeg', title: 'Calidad y Confianza en Cada Producto' },
+  { src: process.env.PUBLIC_URL + '/banner5.jpeg', title: 'Promociones y Formas de pago' }
 ];
 
 const Banner = () => {
