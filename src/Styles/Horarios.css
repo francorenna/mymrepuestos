@@ -1,0 +1,142 @@
+.horarios-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 48px 0 32px 0;
+  padding: 0 16px;
+}
+
+.horarios-card {
+  background: #002060;
+  color: #fff;
+  border-radius: 22px;
+  box-shadow: 0 6px 32px rgba(0,32,96,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  padding: 40px 48px;
+  max-width: 900px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  animation: fadein 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.horarios-info, .horarios-redes {
+  flex: 1 1 260px;
+  min-width: 220px;
+}
+
+.horarios-info h3, .horarios-redes h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.5px;
+}
+
+.horarios-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.horarios-info li {
+  font-size: 1.08rem;
+  margin-bottom: 8px;
+  padding-left: 0;
+  position: relative;
+  opacity: 0.92;
+}
+
+.horarios-redes p {
+  font-size: 1.02rem;
+  margin-bottom: 18px;
+  opacity: 0.92;
+}
+
+.redes-icons {
+  display: flex;
+  gap: 18px;
+  margin-top: 6px;
+}
+
+.red-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  /* box-shadow: 0 2px 8px rgba(0,32,96,0.10); */ /* Sombra eliminada */
+  transition: background 0.2s, color 0.2s, transform 0.18s;
+  cursor: pointer;
+}
+.red-icon.facebook:hover {
+  background: #1877f2;
+  color: #fff;
+  transform: scale(1.13) rotate(-8deg);
+}
+.red-icon.whatsapp:hover {
+  background: #25d366;
+  color: #fff;
+  transform: scale(1.13) rotate(8deg);
+}
+.red-icon.mail:hover {
+  background: #e14a4a;
+  color: #fff;
+  transform: scale(1.13) rotate(4deg);
+}
+
+.redes-mail {
+  margin-top: 10px;
+  font-size: 1.05rem;
+  opacity: 0.92;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+.redes-mail i {
+  margin-right: 6px;
+  color: #fff;
+}
+
+/* Animación de fade-in */
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(32px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .horarios-card {
+    flex-direction: column;
+    gap: 28px;
+    padding: 28px 10px;
+    align-items: stretch;
+  }
+}
+.horarios-direccion {
+  margin-top: 22px;
+}
+.horarios-direccion h4 {
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+.horarios-direccion address {
+  font-style: normal;
+  font-size: 1.02rem;
+  line-height: 1.5;
+  opacity: 0.92;
+  color: #fff;
+}
