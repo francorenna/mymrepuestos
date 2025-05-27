@@ -30,7 +30,7 @@ const Servicios = () => {
   }, []);
 
   return (
-    <section className="servicios-section">
+    <section id="servicios" className="servicios-section">
       <h2 className={`servicios-title${animate ? ' underline-animate' : ''}`}>Nuestros Servicios</h2>
       <div className="servicios-grid">
         {servicios.map((serv, idx) => (

@@ -12,7 +12,7 @@ const Nosotros = () => {
   }, []);
 
   return (
-    <section className="nosotros-section">
+    <section id="nosotros" className="nosotros-section">
       <h2 className={`nosotros-title${animate ? ' underline-animate' : ''}`}>Nosotros</h2>
       <div className="nosotros-logo-container">
         <img

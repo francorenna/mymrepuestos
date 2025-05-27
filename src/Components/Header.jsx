@@ -37,11 +37,31 @@ const Header = () => {
       </div>
       <nav className={`main-nav${menuOpen ? ' open' : ''}`}>
         <ul>
-          <li><a href="#" onClick={handleLinkClick}>Home</a></li>
-          <li><a href="#" onClick={handleLinkClick}>Empresa</a></li>
-          <li><a href="#" onClick={handleLinkClick}>Servicios</a></li>
-          <li><a href="#" onClick={handleLinkClick}>Marcas</a></li>
-          <li><a href="#" onClick={handleLinkClick}>Contacto</a></li>
+          <li>
+            <a href="#inicio" onClick={handleLinkClick}>
+              <i className="fas fa-home menu-item-icon"></i> Home
+            </a>
+          </li>
+          <li>
+            <a href="#nosotros" onClick={handleLinkClick}>
+              <i className="fas fa-users menu-item-icon"></i> Empresa
+            </a>
+          </li>
+          <li>
+            <a href="#servicios" onClick={handleLinkClick}>
+              <i className="fas fa-cogs menu-item-icon"></i> Servicios
+            </a>
+          </li>
+          <li>
+            <a href="#marcas" onClick={handleLinkClick}>
+              <i className="fas fa-tags menu-item-icon"></i> Marcas
+            </a>
+          </li>
+          <li>
+            <a href="#contacto" onClick={handleLinkClick}>
+              <i className="fas fa-envelope menu-item-icon"></i> Contacto
+            </a>
+          </li>
         </ul>
       </nav>
       {menuOpen && <div className="nav-backdrop" onClick={handleMenuToggle}></div>}

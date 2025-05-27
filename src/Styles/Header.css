@@ -172,3 +172,9 @@
     pointer-events: auto;
   }
 }
+.menu-item-icon {
+  font-size: 1em;
+  margin-right: 8px;
+  vertical-align: middle;
+  opacity: 0.85;
+}

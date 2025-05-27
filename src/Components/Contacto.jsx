@@ -9,7 +9,7 @@ const Contacto = () => {
   }, []);
 
   return (
-    <section className="contacto-section">
+    <section id="contacto" className="contacto-section">
       <h2 className={`contacto-title${animate ? ' underline-animate' : ''}`}>Contacto</h2>
       <div className="contacto-content">
         <form className="contacto-form">

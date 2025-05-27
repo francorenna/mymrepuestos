@@ -26,7 +26,7 @@ const NuestrasMarcas = () => {
   }, []);
 
   return (
-    <section className="marcas-section">
+    <section id="marcas" className="marcas-section">
       <h2 className={`marcas-title${animate ? ' underline-animate' : ''}`}>Nuestras Marcas</h2>
       <div className="marcas-fade-viewport">
         {marcas.map((img, idx) => (
