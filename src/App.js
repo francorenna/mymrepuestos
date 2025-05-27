@@ -7,6 +7,7 @@ import Servicios from './Components/Servicios.jsx';
 import NuestrasMarcas from './Components/NuestrasMarcas.jsx';
 import Contacto from './Components/Contacto.jsx';
 import Horarios from './Components/Horarios.jsx';
+import Footer from './Components/Footer.jsx';
 // ...otros imports...
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <NuestrasMarcas />
           <Contacto />
           <Horarios />
+          <Footer />
           {/* Aquí puedes agregar Hero, secciones, etc */}
         </div>
       )}

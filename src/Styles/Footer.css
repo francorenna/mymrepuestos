@@ -1,0 +1,24 @@
+.main-footer {
+  width: 100%;
+  background: #d32f2f; /* Rojo igual al del logo */
+  color: #fff;
+  padding: 24px 0 16px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-datafiscal {
+  height: 114px; /* 3x el tamaño original de 38px */
+  width: auto;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
