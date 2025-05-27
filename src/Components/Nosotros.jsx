@@ -18,7 +18,7 @@ const Nosotros = () => {
         <img
           src={process.env.PUBLIC_URL + '/logointro.svg'}
           alt="Logo MyM"
-          className="nosotros-logo"
+          className="nosotros-logo pulse-logo"
         />
       </div>
       <blockquote className="nosotros-text">
