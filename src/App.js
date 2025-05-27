@@ -8,7 +8,7 @@ import NuestrasMarcas from './Components/NuestrasMarcas.jsx';
 import Contacto from './Components/Contacto.jsx';
 import Horarios from './Components/Horarios.jsx';
 import Footer from './Components/Footer.jsx';
-// ...otros imports...
+import ScrollTopButton from './Components/ScrollTopButton';
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
@@ -26,7 +26,7 @@ function App() {
           <Contacto />
           <Horarios />
           <Footer />
-          {/* Aquí puedes agregar Hero, secciones, etc */}
+          <ScrollTopButton />
         </div>
       )}
     </>

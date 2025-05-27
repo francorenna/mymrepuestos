@@ -1,0 +1,23 @@
+.scroll-top-btn {
+  position: fixed;
+  bottom: 32px;
+  left: 32px;
+  z-index: 2000;
+  background: #002060;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  font-size: 1.7rem;
+  box-shadow: 0 4px 16px rgba(0,32,96,0.18);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+}
+.scroll-top-btn:hover {
+  background: #003399;
+  transform: scale(1.12);
+}

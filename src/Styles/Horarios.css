@@ -140,3 +140,25 @@
   opacity: 0.92;
   color: #fff;
 }
+.estado-local {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  background: #fff;
+  color: #002060;
+  box-shadow: 0 1px 4px rgba(0,32,96,0.10);
+  transition: background 0.2s, color 0.2s;
+}
+.estado-local.abierto {
+  background: #25d366;
+  color: #fff;
+}
+.estado-local.cerrado {
+  background: #d32f2f;
+  color: #fff;
+}
